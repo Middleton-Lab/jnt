@@ -1,0 +1,62 @@
+$ coefficients : Named num [1:4] 0.0176 1.0836 -0.0037 0.0982
+ ..- attr(*, "names")= chr [1:4] "(Intercept)" "x" "a1" "x:a1"
+$ residuals    : Named num [1:100] -0.4002 -0.1336 -0.2271 -0.2587 -0.0474 ...
+ ..- attr(*, "names")= chr [1:100] "1" "2" "3" "4" ...
+$ effects      : Named num [1:100] 1.93836 -9.62534 -0.23482 -0.84892 -0.00299 ...
+ ..- attr(*, "names")= chr [1:100] "(Intercept)" "x" "a1" "x:a1" ...
+$ rank         : int 4
+$ fitted.values: Named num [1:100] -1.168 0.295 1.09 -2.29 0.444 ...
+ ..- attr(*, "names")= chr [1:100] "1" "2" "3" "4" ...
+$ assign       : int [1:4] 0 1 2 3
+$ qr           :List of 5
+ ..$ qr   : num [1:100, 1:4] -10 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 ...
+ .. ..- attr(*, "dimnames")=List of 2
+ .. .. ..$ : chr [1:100] "1" "2" "3" "4" ...
+ .. .. ..$ : chr [1:4] "(Intercept)" "x" "a1" "x:a1"
+ .. ..- attr(*, "assign")= int [1:4] 0 1 2 3
+ .. ..- attr(*, "contrasts")=List of 1
+ .. .. ..$ a: chr "contr.helmert"
+ ..$ qraux: num [1:4] 1.1 1.07 1.12 1.19
+ ..$ pivot: int [1:4] 1 2 3 4
+ ..$ tol  : num 1e-07
+ ..$ rank : int 4
+ ..- attr(*, "class")= chr "qr"
+$ df.residual  : int 96
+$ contrasts    :List of 1
+ ..$ a: chr "contr.helmert"
+$ xlevels      :List of 1
+ ..$ a: chr [1:2] "0" "1"
+$ call         : language lm(formula = y ~ x * a, data = df1.2)
+$ terms        :Classes 'terms', 'formula' length 3 y ~ x * a
+ .. ..- attr(*, "variables")= language list(y, x, a)
+ .. ..- attr(*, "factors")= int [1:3, 1:3] 0 1 0 0 0 1 0 1 1
+ .. .. ..- attr(*, "dimnames")=List of 2
+ .. .. .. ..$ : chr [1:3] "y" "x" "a"
+ .. .. .. ..$ : chr [1:3] "x" "a" "x:a"
+ .. ..- attr(*, "term.labels")= chr [1:3] "x" "a" "x:a"
+ .. ..- attr(*, "order")= int [1:3] 1 1 2
+ .. ..- attr(*, "intercept")= int 1
+ .. ..- attr(*, "response")= int 1
+ .. ..- attr(*, ".Environment")=<environment: R_GlobalEnv> 
+ .. ..- attr(*, "predvars")= language list(y, x, a)
+ .. ..- attr(*, "dataClasses")= Named chr [1:3] "numeric" "numeric" "factor"
+ .. .. ..- attr(*, "names")= chr [1:3] "y" "x" "a"
+$ model        :'data.frame':	100 obs. of  3 variables:
+ ..$ y: num [1:100] -1.568 0.161 0.863 -2.549 0.397 ...
+ ..$ x: num [1:100] -1.207 0.277 1.084 -2.346 0.429 ...
+ ..$ a: Factor w/ 2 levels "0","1": 1 1 1 1 1 1 1 1 1 1 ...
+ ..- attr(*, "terms")=Classes 'terms', 'formula' length 3 y ~ x * a
+ .. .. ..- attr(*, "variables")= language list(y, x, a)
+ .. .. ..- attr(*, "factors")= int [1:3, 1:3] 0 1 0 0 0 1 0 1 1
+ .. .. .. ..- attr(*, "dimnames")=List of 2
+ .. .. .. .. ..$ : chr [1:3] "y" "x" "a"
+ .. .. .. .. ..$ : chr [1:3] "x" "a" "x:a"
+ .. .. ..- attr(*, "term.labels")= chr [1:3] "x" "a" "x:a"
+ .. .. ..- attr(*, "order")= int [1:3] 1 1 2
+ .. .. ..- attr(*, "intercept")= int 1
+ .. .. ..- attr(*, "response")= int 1
+ .. .. ..- attr(*, ".Environment")=<environment: R_GlobalEnv> 
+ .. .. ..- attr(*, "predvars")= language list(y, x, a)
+ .. .. ..- attr(*, "dataClasses")= Named chr [1:3] "numeric" "numeric" "factor"
+ .. .. .. ..- attr(*, "names")= chr [1:3] "y" "x" "a"
+- attr(*, "class")= chr "lm"

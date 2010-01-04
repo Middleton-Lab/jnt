@@ -1,0 +1,10 @@
+Package: jnt
+Type: Package
+Title: Johnson-Neyman Technique
+Version: 0.1
+Date: 2009-04-12
+Author: Kevin Middleton
+Maintainer: Kevin Middleton <kmm@csusb.edu>
+Description: More about what it does (maybe more than one line)
+License: GPL
+LazyLoad: yes
