@@ -1,4 +1,4 @@
-plot.jnt <- function(x, ...){
+plot.jnt <- function(x, reg.lty = 1, jnt.lty = 2, ...){
 reg.lty <- 1
 jnt.lty <- 2
 
