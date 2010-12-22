@@ -121,7 +121,7 @@ flush(stderr()); flush(stdout())
 
 ### Name: jnt
 ### Title: Johnson-Neyman Technique
-### Aliases: jnt jnt.data.frame plot.jnt
+### Aliases: jnt jnt.data.frame plot.jnt print.jnt
 ### Keywords: univar
 
 ### ** Examples
@@ -147,10 +147,6 @@ df2 <- data.frame(x = x2, y = y2)
 (jnt.out <- jnt(df1, df2))
 
 plot(jnt.out)
-
-df1.2 <- data.frame(x = c(x1, x2), y = c(y1, y2), 
-	a = factor(rep(0:1, each = n)))
-summary(testlm <- lm(y ~ x * a, dat = df1.2))
 
 
 

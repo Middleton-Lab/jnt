@@ -2,6 +2,7 @@
 \alias{jnt}
 \alias{jnt.data.frame}
 \alias{plot.jnt}
+\alias{print.jnt}
 \title{
 Johnson-Neyman Technique
 }
@@ -10,13 +11,14 @@ This function performs the Johnson-Neyman Technique on data contained in two \co
 }
 
 \usage{
-jnt(dat1, dat2 = NULL, which.is.fact = NULL, alpha = 0.05, total.comp = 1)
+jnt(dat1, dat2 = NULL, which.is.fact = NULL,
+  alpha = 0.05, total.comp = 1)
 }
 
 \arguments{
   \item{dat1}{\code{data.frame} containing data set 1}
   \item{dat2}{\code{data.frame} containing data set 2}
-  \item{which.is.fact}{Currently not used}
+  \item{which.is.fact}{Currently not implemented}
   \item{alpha}{Desired alpha level for comparison}
   \item{total.comp}{Total number of comparisons}
 }
@@ -86,12 +88,6 @@ df2 <- data.frame(x = x2, y = y2)
 (jnt.out <- jnt(df1, df2))
 
 plot(jnt.out)
-
-df1.2 <- data.frame(x = c(x1, x2), y = c(y1, y2), 
-	a = factor(rep(0:1, each = n)))
-summary(testlm <- lm(y ~ x * a, dat = df1.2))
 }
 
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
 \keyword{ univar }
