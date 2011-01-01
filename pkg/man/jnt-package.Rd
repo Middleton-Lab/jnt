@@ -1,5 +1,5 @@
 \name{jnt-package}
-\Rdversion{1.1}
+\Rdversion{1.1-1}
 \alias{jnt-package}
 \docType{package}
 \title{
@@ -12,10 +12,11 @@ Carry out the Johnson-Neyman Technique
 \tabular{ll}{
 Package: \tab jnt\cr
 Type: \tab Package\cr
-Version: \tab 0.1\cr
+Version: \tab 0.1-1\cr
 Date: \tab 2010-12-20\cr
 License: \tab GPL-2\cr
 LazyLoad: \tab yes\cr
+LazyData: \tab yes\cr
 }
 }
 

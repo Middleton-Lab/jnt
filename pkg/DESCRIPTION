@@ -1,12 +1,13 @@
 Package: jnt
 Type: Package
 Title: Johnson-Neyman Technique
-Version: 0.1
-Date: 2010-12-20
+Version: 0.1-1
+Date: 2010-12-31
 Author: Kevin Middleton
 Maintainer: Kevin Middleton <kmm@csusb.edu>
-Depends: R (>= 2.10)
-Description: More about what it does (maybe more than one line)
+Depends: R (>= 2.12)
+Description: Functions implementing the Johnson-Neyman technique.
 License: GPL-2
 LazyLoad: yes
+LazyData: yes
 Encoding: UTF-8
