@@ -1,5 +1,3 @@
-# Written by Kevin Middleton (kmm@csusb.edu)
-
 jnt <- function(dat1, dat2 = NULL, which.is.fact = NULL, alpha = 0.05, total.comp = 1)
 {
   UseMethod("jnt")

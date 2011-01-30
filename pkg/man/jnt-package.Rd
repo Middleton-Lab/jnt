@@ -12,8 +12,8 @@ Carry out the Johnson-Neyman Technique
 \tabular{ll}{
 Package: \tab jnt\cr
 Type: \tab Package\cr
-Version: \tab 0.1-1\cr
-Date: \tab 2010-12-20\cr
+Version: \tab 0.1-2\cr
+Date: \tab 2011-01-30\cr
 License: \tab GPL-2\cr
 LazyLoad: \tab yes\cr
 LazyData: \tab yes\cr
