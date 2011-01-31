@@ -6,40 +6,50 @@
 #' 
 #' 
 #' @aliases jnt jnt.data.frame plot.jnt print.jnt
+#' 
 #' @param dat1 \code{data.frame} containing data set 1
 #' @param dat2 \code{data.frame} containing data set 2
 #' @param which.is.fact Currently not implemented
 #' @param alpha Desired alpha level for comparison
 #' @param total.comp Total number of comparisons
-#' @return A list of type \code{jnt} containing: \item{dat1}{Data set 1}
-#'   \item{dat2}{Data set 2} \item{alpha}{Alpha level} \item{slope1}{Slope for
-#'   data set 1} \item{int1}{intercept for data set 1} \item{slope2}{Slope for
-#'   data set 2} \item{int2}{intercept for data set 2} \item{lower}{Lower edge
-#'   of range of no significant different in slopes} \item{upper}{Upper edge of
-#'   range of no significant different in slopes}
+#' 
+#' @return A list of type \code{jnt} containing:
+#'   \item{dat1}{Data set 1}
+#'   \item{dat2}{Data set 2}
+#'   \item{alpha}{Alpha level}
+#'   \item{slope1}{Slope for data set 1}
+#'   \item{int1}{intercept for data set 1}
+#'   \item{slope2}{Slope for data set 2}
+#'   \item{int2}{intercept for data set 2}
+#'   \item{lower}{Lower edge  of range of no significant different in slopes}
+#'   \item{upper}{Upper edge of range of no significant different in slopes}
+#' 
 #' @author Kevin Middleton (kmm@@csusb.edu)
+#' 
 #' @references Johnson PO, Neyman J (1936) Tests of certain linear hypotheses
 #'   and their application to some educational problems. \emph{Statistical
-#'   Research Memoirs} 1:57-93.
+#'   Research Memoirs} 1: 57-93.
 #' 
 #' Hunka S, Leighton J (1997) Defining Johnson-Neyman regions of significance
 #'   in three-covariate ANCOVA using mathematica. \emph{Journal of Educational
-#'   and Behavioral Statistics} 22:361-387.
+#'   and Behavioral Statistics} 22: 361-387.
 #' 
 #' White CR (2003) Allometric analysis beyond heterogenous regression slopes:
 #'   Use of the Johnson-Neyman Technique in comparative biology. \emph{Physiol
-#'   Biochem Zool} 76:135-140.
+#'   Biochem Zool} 76: 135-140.
 #' 
 #' \emph{Examples:}
 #' 
 #' White CR (2003) The influence of foraging mode and arid adaptation on the
 #'   basal metabolic rates of burrowing mammals. \emph{Physiol Biochem Zool}
-#'   76:122-134.
+#'   76: 122-134.
 #' 
 #' Lavin SR, Karasov WH, Ives AR, Middleton KM, Garland T (2008) Morphometrics
 #'   of the avian small intestine compared with that of nonflying mammals: A
-#'   phylogenetic approach. \emph{Physiol Biochem Zool} 81:526-550.
+#'   phylogenetic approach. \emph{Physiol Biochem Zool} 81: 526-550.
+#' 
 #' @keywords univar
+#' 
 #' @examples
 #' 
 #' # Simulate data
