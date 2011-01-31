@@ -33,7 +33,9 @@
 #' Lavin SR, Karasov WH, Ives AR, Middleton KM, Garland T (2008) Morphometrics
 #'   of the avian small intestine compared with that of nonflying mammals: A
 #'   phylogenetic approach. \emph{Physiol Biochem Zool} 81: 526-550.
+#'
 #' @keywords package
+#'
 #' @examples
 #' 
 #' example(jnt)
@@ -45,6 +47,7 @@ NULL
 
 
 #' Data from Lavin et al., 2008
+#' 
 #' Data set 1 from Lavin et al., 2008
 #' 
 #' 
@@ -53,7 +56,7 @@ NULL
 #' @format A data frame with 64 observations on the following 2 variables.
 #'   \describe{ \item{list("V1")}{a numeric vector} \item{list("V2")}{a numeric
 #'   vector} }
-#' @source Lavin SR, Karasov WH, Ives AR, Middleton KM, Garland T (2008)
+#' @references Lavin SR, Karasov WH, Ives AR, Middleton KM, Garland T (2008)
 #'   Morphometrics of the avian small intestine compared with that of nonflying
 #'   mammals: A phylogenetic approach. \emph{Physiol Biochem Zool} 81: 526-550.
 #' @keywords datasets
@@ -72,6 +75,7 @@ NULL
 
 
 #' Data from Lavin et al., 2008
+#' 
 #' Data set 2 from Lavin et al., 2008
 #' 
 #' 
@@ -80,7 +84,7 @@ NULL
 #' @format A data frame with 220 observations on the following 2 variables.
 #'   \describe{ \item{list("V1")}{a numeric vector} \item{list("V2")}{a numeric
 #'   vector} }
-#' @source Lavin SR, Karasov WH, Ives AR, Middleton KM, Garland T (2008)
+#' @references Lavin SR, Karasov WH, Ives AR, Middleton KM, Garland T (2008)
 #'   Morphometrics of the avian small intestine compared with that of nonflying
 #'   mammals: A phylogenetic approach. \emph{Physiol Biochem Zool} 81: 526-550.
 #' @keywords datasets
@@ -99,6 +103,7 @@ NULL
 
 
 #' Data from White, 2003
+#' 
 #' Data set 1 from from White, 2003
 #' 
 #' 
@@ -107,7 +112,7 @@ NULL
 #' @format A data frame with 50 observations on the following 2 variables.
 #'   \describe{ \item{list("V1")}{a numeric vector} \item{list("V2")}{a numeric
 #'   vector} }
-#' @source White CR (2003) Allometric analysis beyond heterogenous regression
+#' @references White CR (2003) Allometric analysis beyond heterogenous regression
 #'   slopes: Use of the Johnson-Neyman Technique in comparative biology.
 #'   \emph{Physiol Biochem Zool} 76: 135-140.
 #' @keywords datasets
@@ -126,6 +131,7 @@ NULL
 
 
 #' Data from White, 2003
+#' 
 #' Data set 2 from from White, 2003
 #' 
 #' 
@@ -134,7 +140,7 @@ NULL
 #' @format A data frame with 50 observations on the following 2 variables.
 #'   \describe{ \item{list("V1")}{a numeric vector} \item{list("V2")}{a numeric
 #'   vector} }
-#' @source White CR (2003) Allometric analysis beyond heterogenous regression
+#' @references White CR (2003) Allometric analysis beyond heterogenous regression
 #'   slopes: Use of the Johnson-Neyman Technique in comparative biology.
 #'   \emph{Physiol Biochem Zool} 76: 135-140.
 #' @keywords datasets

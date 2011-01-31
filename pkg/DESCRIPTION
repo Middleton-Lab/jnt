@@ -12,5 +12,5 @@ License: GPL-2
 LazyLoad: yes
 LazyData: yes
 Encoding: UTF-8
-Collate: 'jnt.R' 'pkg-package.R' 'plot.jnt.R'
+Collate: 'jnt-package.R' 'jnt.R' 'plot.jnt.R'
     'print.jnt.R'
