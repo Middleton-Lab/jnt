@@ -1,11 +1,13 @@
-
-
 #' Johnson-Neyman technique
 #' Carry out the Johnson-Neyman Technique
 #' 
-#' \tabular{ll}{ Package: \tab jnt\cr Type: \tab Package\cr Version: \tab
-#' 0.1-2\cr Date: \tab 2011-01-30\cr License: \tab GPL-2\cr LazyLoad: \tab
-#' yes\cr LazyData: \tab yes\cr }
+#' \tabular{ll}{ Package: \tab jnt\cr
+#' Type: \tab Package\cr
+#' Version: \tab 0.1-3\cr
+#' Date: \tab 2011-02-01\cr
+#' License: \tab GPL-2\cr
+#' LazyLoad: \tab yes\cr
+#' LazyData: \tab yes\cr }
 #' 
 #' @name jnt-package
 #' @docType package

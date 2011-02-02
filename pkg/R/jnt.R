@@ -1,11 +1,9 @@
-
-
 #' Johnson-Neyman Technique
 #' This function performs the Johnson-Neyman Technique on data contained in two
 #' \code{data.frame}s.
 #' 
 #' 
-#' @aliases jnt jnt.data.frame plot.jnt print.jnt
+#' @aliases jnt jnt.data.frame print.jnt
 #' 
 #' @param dat1 \code{data.frame} containing data set 1
 #' @param dat2 \code{data.frame} containing data set 2

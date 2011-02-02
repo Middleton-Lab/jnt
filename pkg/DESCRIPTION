@@ -1,8 +1,8 @@
 Package: jnt
 Type: Package
 Title: Johnson-Neyman Technique
-Version: 0.1-2
-Date: 2011-01-30
+Version: 0.1-3
+Date: 2011-02-01
 Author: Kevin Middleton
 Maintainer: Kevin Middleton <kmm@csusb.edu>
 Depends: R (>= 2.12)
