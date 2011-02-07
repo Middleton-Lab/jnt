@@ -6,8 +6,8 @@
 Carry out the Johnson-Neyman Technique}
 \details{\tabular{ll}{ Package: \tab jnt\cr
 Type: \tab Package\cr
-Version: \tab 0.1-3\cr
-Date: \tab 2011-02-01\cr
+Version: \tab 0.1-4\cr
+Date: \tab 2011-02-06\cr
 License: \tab GPL-2\cr
 LazyLoad: \tab yes\cr
 LazyData: \tab yes\cr }}

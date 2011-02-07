@@ -34,7 +34,7 @@ plot.jnt <- function(x,
   if("lwd" %in% names(dots)) {lwd <- dots$lwd} else {lwd <- 1}
   if("pch" %in% names(dots)) {pch <- dots$pch} else {pch <- 16}
   if("xlab" %in% names(dots)) {xlab <- dots$xlab} else {xlab <- "x"}
-  if("ylab" %in% names(dots)) {ylab <- dots$ylab} else {xlab <- "y"}
+  if("ylab" %in% names(dots)) {ylab <- dots$ylab} else {ylab <- "y"}
   
   x1 <- x$dat1$x
   x2 <- x$dat2$x

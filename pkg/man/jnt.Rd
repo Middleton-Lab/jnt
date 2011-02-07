@@ -3,8 +3,8 @@
 \title{Johnson-Neyman Technique...}
 \usage{jnt(dat1, dat2, which.is.fact, alpha=0.05, total.comp=1)
 }
-\description{Johnson-Neyman Technique
-This function performs the Johnson-Neyman Technique on data contained in two
+\description{Johnson-Neyman Technique}
+\details{This function performs the Johnson-Neyman Technique on data contained in two
 \code{data.frame}s.}
 \alias{jnt}
 \alias{jnt.data.frame}
@@ -19,7 +19,7 @@ This function performs the Johnson-Neyman Technique on data contained in two
 \item{int2}{intercept for data set 2}
 \item{lower}{Lower edge  of range of no significant different in slopes}
 \item{upper}{Upper edge of range of no significant different in slopes}}
-\author{Kevin Middleton (kmm@csusb.edu)}
+\author{Kevin Middleton (\email{kmm@csusb.edu})}
 \references{Johnson PO, Neyman J (1936) Tests of certain linear hypotheses
 and their application to some educational problems. \emph{Statistical
 Research Memoirs} 1: 57-93.
