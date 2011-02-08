@@ -10,7 +10,7 @@
 \item{\code{V1}}{a numeric vector}
 \item{\code{V2}}{a numeric vector}
 }}
-\references{Lavin SR, Karasov WH, Ives AR, Middleton KM, Garland T (2008)
+\references{Lavin SR, Karasov WH, Ives AR, Middleton KM, Garland T, Jr (2008)
 Morphometrics of the avian small intestine compared with that of nonflying
 mammals: A phylogenetic approach. \emph{Physiol Biochem Zool} 81: 526-550.}
 \keyword{datasets}

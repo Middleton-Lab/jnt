@@ -17,7 +17,7 @@
 \item{int1}{intercept for data set 1}
 \item{slope2}{Slope for data set 2}
 \item{int2}{intercept for data set 2}
-\item{lower}{Lower edge  of range of no significant different in slopes}
+\item{lower}{Lower edge of range of no significant different in slopes}
 \item{upper}{Upper edge of range of no significant different in slopes}}
 \author{Kevin Middleton (\email{kmm@csusb.edu})}
 \references{Johnson PO, Neyman J (1936) Tests of certain linear hypotheses
