@@ -1,6 +1,6 @@
 \name{jnt}
 \alias{jnt}
-\title{Johnson-Neyman Technique...}
+\title{Johnson-Neyman Technique}
 \usage{jnt(dat1, dat2, which.is.fact, alpha=0.05, total.comp=1)
 }
 \description{Johnson-Neyman Technique}
