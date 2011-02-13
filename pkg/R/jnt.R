@@ -3,6 +3,8 @@
 ##' This function performs the Johnson-Neyman Technique on data contained in two
 ##' \code{data.frame}s.
 ##' 
+##' @title Johnson-Neyman Technique
+##' 
 ##' @aliases jnt jnt.data.frame print.jnt
 ##' 
 ##' @param dat1 \code{data.frame} containing data set 1

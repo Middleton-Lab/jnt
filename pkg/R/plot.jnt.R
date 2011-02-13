@@ -2,6 +2,8 @@
 ##' 
 ##' Plot object returned by \code{jnt}.
 ##' 
+##' @title Plot jnt Object
+##' 
 ##' @method plot jnt
 ##' 
 ##' @param x Object of class \code{jnt}
