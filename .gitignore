@@ -1,0 +1,15 @@
+
+# /
+/jnt-manual.pdf
+/makepkg.sh
+/jnt.tmproj
+/pkg.Rcheck
+/jnt_0.1.tar.gz
+/makepkg2.sh
+/.Rhistory
+
+# /pkg/
+/pkg/.Rhistory
+
+# /pkg/R/
+/pkg/R/.Rhistory
