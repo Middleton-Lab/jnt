@@ -1,8 +1,8 @@
 \name{jnt-package}
 \alias{jnt-package}
 \alias{jnt-package}
-\title{Johnson-Neyman technique...}
-\description{Johnson-Neyman technique}
+\title{Johnson-Neyman Technique...}
+\description{Johnson-Neyman Technique}
 \details{Carry out the Johnson-Neyman Technique
 
 \tabular{ll}{
