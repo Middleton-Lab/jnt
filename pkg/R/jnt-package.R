@@ -1,4 +1,4 @@
-##' Johnson-Neyman technique
+##' Johnson-Neyman Technique
 ##' 
 ##' Carry out the Johnson-Neyman Technique
 ##' 
