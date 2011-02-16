@@ -1,3 +1,3 @@
 # jnt #
 
-An R package to carry out the Johnson-Neyman Technique for ANCOVA
+An R package to carry out the Johnson-Neyman Technique for ANCOVA.
