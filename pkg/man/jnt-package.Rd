@@ -8,8 +8,8 @@
 \tabular{ll}{
 Package: \tab jnt\cr
 Type: \tab Package\cr
-Version: \tab 0.1-5\cr
-Date: \tab 2011-02-12\cr
+Version: \tab 0.1-7\cr
+Date: \tab 2011-03-13\cr
 License: \tab GPL-2\cr
 LazyLoad: \tab yes\cr
 LazyData: \tab yes\cr
