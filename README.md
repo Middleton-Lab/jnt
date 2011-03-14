@@ -15,3 +15,17 @@ Educational and Behavioral Statistics* 22: 361-387.
 White CR (2003) Allometric analysis beyond heterogenous regression
 slopes: Use of the Johnson-Neyman Technique in comparative
 biology. *Physiol Biochem Zool* 76: 135-140.
+<<<<<<< HEAD
+=======
+
+# Examples #
+
+White CR (2003) The influence of foraging mode and arid adaptation on
+the basal metabolic rates of burrowing mammals. *Physiol Biochem Zool*
+76: 122-134.
+
+Lavin SR, Karasov WH, Ives AR, Middleton KM, Garland T, Jr (2008)
+Morphometrics of the avian small intestine compared with that of
+nonflying mammals: A phylogenetic approach. *Physiol Biochem Zool* 81:
+526-550.
+>>>>>>> master
