@@ -1,6 +1,7 @@
 # jnt #
 
-An R package to carry out the Johnson-Neyman Technique for ANCOVA.
+An R package to carry out the Johnson-Neyman Technique for ANCOVA
+data. Find areas of non-significant slope differences.
 
 # References #
 
