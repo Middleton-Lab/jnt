@@ -1,3 +1,5 @@
+library(testthat)
+
 context("Class check")
 
 test_that("class is returned correctly", {
