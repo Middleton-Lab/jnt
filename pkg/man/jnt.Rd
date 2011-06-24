@@ -8,7 +8,6 @@
 \code{data.frame}s. Currently only the method for \code{data.frame}s is
 implemented.}
 \alias{jnt}
-\alias{jnt.data.frame}
 \alias{print.jnt}
 \value{A list of type \code{jnt} containing:
 \item{dat1}{Data set 1}
