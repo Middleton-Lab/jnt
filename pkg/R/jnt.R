@@ -6,7 +6,7 @@
 ##' 
 ##' @title Johnson-Neyman Technique
 ##' 
-##' @aliases jnt jnt.data.frame print.jnt
+##' @aliases jnt print.jnt
 ##' 
 ##' @param dat1 \code{data.frame} containing data set 1
 ##' @param dat2 \code{data.frame} containing data set 2
@@ -75,15 +75,13 @@
 ##' 
 ##' plot(jnt.out)
 ##' 
-jnt <- function(dat1, dat2 = NULL, which.is.fact = NULL, alpha = 0.05, total.comp = 1) {
-  UseMethod("jnt")
-}
+##' @export
 
-jnt.data.frame <- function(dat1,
-                           dat2 = NULL,
-                           which.is.fact = NULL,
-                           alpha = 0.05,
-                           total.comp = 1) {
+jnt <- function(dat1, 
+                dat2 = NULL, 
+                which.is.fact = NULL, 
+                alpha = 0.05, 
+                total.comp = 1) {
   dat1.n <- nrow(dat1)
   dat2.n <- nrow(dat2)
   total.n <- dat1.n + dat2.n              # Total n for both groups
