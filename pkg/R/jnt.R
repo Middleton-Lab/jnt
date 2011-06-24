@@ -76,6 +76,9 @@
 ##' plot(jnt.out)
 ##' 
 ##' @export
+##' @S3method print jnt
+##' @S3method plot jnt
+
 
 jnt <- function(dat1, 
                 dat2 = NULL, 

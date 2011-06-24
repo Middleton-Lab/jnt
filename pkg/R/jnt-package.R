@@ -15,10 +15,6 @@
 ##' @name jnt-package
 ##' 
 ##' @docType package
-##'
-##' @export jnt
-##' @S3method print jnt
-##' @S3method plot jnt
 ##' 
 ##' @author Kevin Middleton (kmm@@csusb.edu)
 ##' 
