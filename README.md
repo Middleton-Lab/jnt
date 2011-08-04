@@ -6,7 +6,8 @@ data. Find areas of non-significant slope differences.
 # Installation #
 
 You can install the most recent version directly from github using
-`install_github()` from the devtools package (hadley/devtools).
+`install_github()` from the
+[devtools package](https://github.com/hadley/devtools).
 
 ```R
 require(devtools)
