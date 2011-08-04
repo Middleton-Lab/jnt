@@ -19,7 +19,7 @@
 ##' @param ... Additional parameters passed to plot (e.g., lwd, pch, 
 ##' xlab, ylab).
 ##' 
-##' @author Kevin Middleton (\email{kmm@@csusb.edu})
+##' @author Kevin Middleton \email{kmm@@csusb.edu}
 ##' 
 ##' @keywords univar
 ##' 

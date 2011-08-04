@@ -1,5 +1,6 @@
 Package: jnt
-Imports: graphics
+Imports:
+    graphics
 Maintainer: Kevin Middleton <kmm@csusb.edu>
 License: GPL-2
 Title: Johnson-Neyman Technique
@@ -7,10 +8,14 @@ LazyData: yes
 Type: Package
 LazyLoad: yes
 Author: Kevin Middleton
-Description: Functions implementing the
-    Johnson-Neyman technique.
+Description: Functions implementing the Johnson-Neyman
+    technique.
 Version: 0.1-12
 Date: 2011-08-03
-Depends: R (>= 2.12)
+Depends:
+    R (>= 2.12)
 Encoding: UTF-8
-Collate: 'jnt-package.R' 'jnt.R' 'plot.jnt.R'
+Collate:
+    'jnt-package.R'
+    'jnt.R'
+    'plot.jnt.R'
