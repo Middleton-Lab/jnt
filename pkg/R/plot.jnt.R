@@ -8,12 +8,16 @@
 ##' 
 ##' @param x Object of class \code{jnt}
 ##' @param reg.lty Line type for regression lines. Defaults to 1.
-##' @param jnt.lty Line type for range of insignificant differences. Defaults to 2.
+##' @param jnt.lty Line type for range of insignificant differences. 
+##' Defaults to 2.
 ##' @param col.1 Color for series 1. Defaults to "black."
 ##' @param col.2 Color for series 2. Defaults to "gray."
-##' @param col.signif Color for bars denoting range of insignificance. Defaults to "red."
-##' @param plot.range logical. If \code{TRUE} (the default) the range of insignificance is plotted.
-##' @param ... Additional parameters passed to plot (e.g., lwd, pch, xlab, ylab).
+##' @param col.signif Color for bars denoting range of insignificance. 
+##' Defaults to "red."
+##' @param plot.range logical. If \code{TRUE} (the default) the range 
+##' of insignificance is plotted.
+##' @param ... Additional parameters passed to plot (e.g., lwd, pch, 
+##' xlab, ylab).
 ##' 
 ##' @author Kevin Middleton (\email{kmm@@csusb.edu})
 ##' 

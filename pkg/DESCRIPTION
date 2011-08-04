@@ -9,9 +9,8 @@ LazyLoad: yes
 Author: Kevin Middleton
 Description: Functions implementing the
     Johnson-Neyman technique.
-Version: 0.1-11
-Date: 2011-06-23
+Version: 0.1-12
+Date: 2011-08-03
 Depends: R (>= 2.12)
 Encoding: UTF-8
 Collate: 'jnt-package.R' 'jnt.R' 'plot.jnt.R'
-    'print.jnt.R'

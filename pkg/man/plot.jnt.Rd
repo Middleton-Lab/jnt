@@ -10,12 +10,16 @@
 \keyword{univar}
 \arguments{\item{x}{Object of class \code{jnt}}
 \item{reg.lty}{Line type for regression lines. Defaults to 1.}
-\item{jnt.lty}{Line type for range of insignificant differences. Defaults to 2.}
+\item{jnt.lty}{Line type for range of insignificant differences. 
+Defaults to 2.}
 \item{col.1}{Color for series 1. Defaults to "black."}
 \item{col.2}{Color for series 2. Defaults to "gray."}
-\item{col.signif}{Color for bars denoting range of insignificance. Defaults to "red."}
-\item{plot.range}{logical. If \code{TRUE} (the default) the range of insignificance is plotted.}
-\item{...}{Additional parameters passed to plot (e.g., lwd, pch, xlab, ylab).}
+\item{col.signif}{Color for bars denoting range of insignificance. 
+Defaults to "red."}
+\item{plot.range}{logical. If \code{TRUE} (the default) the range 
+of insignificance is plotted.}
+\item{...}{Additional parameters passed to plot (e.g., lwd, pch, 
+xlab, ylab).}
 }
 \examples{example(jnt)}
 
