@@ -2,9 +2,9 @@
 \alias{plot.jnt}
 \title{Plot jnt Object}
 \usage{
-  \method{plot}{jnt} (x, reg.lty = 1, jnt.lty = 2, col.1 =
-  "black", col.2 = "gray", col.signif = "red", plot.range =
-  TRUE, ...)
+  \method{plot}{jnt} (x, reg.lty = 1, jnt.lty = 2,
+    col.1 = "black", col.2 = "gray", col.signif = "red",
+    plot.range = TRUE, ...)
 }
 \arguments{
   \item{x}{Object of class \code{jnt}}

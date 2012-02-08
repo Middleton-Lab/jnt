@@ -3,8 +3,8 @@
 \alias{print.jnt}
 \title{Johnson-Neyman Technique}
 \usage{
-  jnt(dat1, dat2 = NULL, which.is.fact = NULL, alpha =
-  0.05, total.comp = 1)
+  jnt(dat1, dat2 = NULL, which.is.fact = NULL,
+    alpha = 0.05, total.comp = 1)
 }
 \arguments{
   \item{dat1}{\code{data.frame} containing data set 1}

@@ -14,6 +14,8 @@ require(devtools)
 install_github("jnt", "kmiddleton")
 ```
 
+Note that if you are using Windows, you will first need to install Rtools. Start at <http://www.murdoch-sutherland.com/Rtools/> and follow the links to CRAN. 
+
 # References #
 
 Johnson PO, Neyman J (1936) Tests of certain linear hypotheses and
