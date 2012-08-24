@@ -3,3 +3,4 @@
 .RData
 jnt.Rproj
 bin/
+*.tar.gz
