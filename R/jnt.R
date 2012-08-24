@@ -91,6 +91,14 @@ jnt <- function(dat1,
   indiv.res.df <- total.n - 4             # Individual residual df
   within.res.df <- total.n - 2 - 1        # Within residual df
 
+  ## Test for significant slope difference
+  not.signif <- precheck(dat1, dat2)
+  if(not.signif){
+    stop("The slopes are not significantly different.
+         You probably should reconsider using 
+         the Johnson-Neyman Technique.")
+  }
+  
   dat1.x <- dat1[,1]
   dat1.y <- dat1[,2]
   dat1.xbar <- mean(dat1.x)
@@ -185,4 +193,22 @@ print.jnt <- function(x, digits = 4, ...){
   cat("Region of non-significant slope difference\n")
   cat("\tLower\t\tUpper\n")
   cat("\t", format(x$lower, digits = digits), "\t", format(x$upper, digits = digits), "\n\n")
+}
+
+## Check for no slope difference
+precheck <- function(dat1, dat2){
+  dat1.n <- nrow(dat1)
+  dat2.n <- nrow(dat2)
+  dd <- data.frame(x = c(dat1[, 1], dat2[, 1]),
+                   y = c(dat1[, 2], dat2[, 2]),
+                   A = as.factor(c(rep(1, times = dat1.n),
+                                   rep(2, times = dat2.n))))
+  fm <- lm(y ~ x * A, data = dd)
+  fm.summary <- coef(summary(fm))
+  if(fm.summary[4, 4] < 0.05){
+    not.signif <- FALSE
+  } else {
+    not.signif <- TRUE
+  }
+  return(not.signif)
 }
