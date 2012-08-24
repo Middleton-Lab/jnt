@@ -10,10 +10,10 @@ LazyLoad: yes
 Author: Kevin Middleton
 Description: Functions implementing the Johnson-Neyman
     technique.
-Version: 0.1-14
-Date: 2011-10-06
+Version: 0.2-1
+Date: 2012-08-24
 Depends:
-    R (>= 2.14)
+    R (>= 2.15)
 Encoding: UTF-8
 Collate:
     'jnt-package.R'
