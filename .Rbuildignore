@@ -1,1 +1,11 @@
 ^\.Rproj\.user$
+^jnt\.Rproj$
+^bin$
+^builds$
+^sandbox$
+^\..*\.swp$
+^\..*\.swo$
+^abd.*\.gz$
+^\.gitignore$
+^\.git$
+^README\.md$
