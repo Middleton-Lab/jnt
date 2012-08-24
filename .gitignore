@@ -4,3 +4,4 @@
 jnt.Rproj
 bin/
 *.tar.gz
+*.Rcheck
