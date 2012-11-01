@@ -5,8 +5,8 @@
 ##' \tabular{ll}{
 ##' Package: \tab jnt\cr
 ##' Type: \tab Package\cr
-##' Version: \tab 0.2-1\cr
-##' Date: \tab 2012-08-24\cr
+##' Version: \tab 0.2-2\cr
+##' Date: \tab 2012-11-01\cr
 ##' License: \tab GPL-2\cr
 ##' LazyLoad: \tab yes\cr
 ##' LazyData: \tab yes\cr
@@ -16,9 +16,9 @@
 ##' 
 ##' @docType package
 ##' 
-##' @author Kevin Middleton (kmm@@csusb.edu)
+##' @author Kevin Middleton (middletonk@@missouri.edu)
 ##' 
-##' Maintainer: Kevin Middleton (kmm@@csusb.edu)
+##' Maintainer: Kevin Middleton (middletonk@@missouri.edu)
 ##'
 ##' @references Johnson PO, Neyman J (1936) Tests of certain linear hypotheses
 ##' and their application to some educational problems. \emph{Statistical
