@@ -23,7 +23,7 @@ their application to some educational problems. *Statistical Research
 Memoirs* 1:57-93.
 
 Hunka S, Leighton J (1997) Defining Johnson-Neyman regions of
-significance in three-covariate ANCOVA using mathematica. *Journal of
+significance in three-covariate ANCOVA using Mathematica. *Journal of
 Educational and Behavioral Statistics* 22: 361-387.
 
 White CR (2003) Allometric analysis beyond heterogenous regression
