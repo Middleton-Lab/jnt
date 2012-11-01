@@ -38,7 +38,7 @@
 example(jnt)
 }
 \author{
-  Kevin Middleton \email{kmm@csusb.edu}
+  Kevin Middleton \email{middletonk@missouri.edu}
 }
 \keyword{univar}
 

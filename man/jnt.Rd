@@ -59,7 +59,7 @@ df2 <- data.frame(x = x2, y = y2)
 plot(jnt.out)
 }
 \author{
-  Kevin Middleton (\email{kmm@csusb.edu})
+  Kevin Middleton (\email{middletonk@missouri.edu})
 }
 \references{
   Johnson PO and Neyman J (1936) Tests of certain linear
@@ -68,7 +68,7 @@ plot(jnt.out)
 
   Hunka S and Leighton J (1997) Defining Johnson-Neyman
   regions of significance in three-covariate ANCOVA using
-  mathematica. \emph{Journal of Educational and Behavioral
+  Mathematica. \emph{Journal of Educational and Behavioral
   Statistics} 22: 361-387.
 
   White CR (2003) Allometric analysis beyond heterogenous

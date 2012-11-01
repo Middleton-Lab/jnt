@@ -25,14 +25,14 @@
 ##' \item{lower}{Lower edge of range of no significant different in slopes}
 ##' \item{upper}{Upper edge of range of no significant different in slopes}
 ##' 
-##' @author Kevin Middleton (\email{kmm@@csusb.edu})
+##' @author Kevin Middleton (\email{middletonk@@missouri.edu})
 ##' 
 ##' @references Johnson PO and Neyman J (1936) Tests of certain linear hypotheses
 ##' and their application to some educational problems. \emph{Statistical
 ##' Research Memoirs} 1: 57-93.
 ##' 
 ##' Hunka S and Leighton J (1997) Defining Johnson-Neyman regions of significance
-##' in three-covariate ANCOVA using mathematica. \emph{Journal of Educational
+##' in three-covariate ANCOVA using Mathematica. \emph{Journal of Educational
 ##' and Behavioral Statistics} 22: 361-387.
 ##' 
 ##' White CR (2003) Allometric analysis beyond heterogenous regression slopes:
