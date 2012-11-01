@@ -26,7 +26,7 @@ example(jnt)
 
   Hunka S, Leighton J (1997) Defining Johnson-Neyman
   regions of significance in three-covariate ANCOVA using
-  mathematica. \emph{Journal of Educational and Behavioral
+  Mathematica. \emph{Journal of Educational and Behavioral
   Statistics} 22: 361-387.
 
   White CR (2003) Allometric analysis beyond heterogenous
