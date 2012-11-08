@@ -7,7 +7,7 @@
 }
 \details{
   \tabular{ll}{ Package: \tab jnt\cr Type: \tab Package\cr
-  Version: \tab 0.2-2\cr Date: \tab 2012-11-01\cr License:
+  Version: \tab 0.2-3\cr Date: \tab 2012-11-08\cr License:
   \tab GPL-2\cr LazyLoad: \tab yes\cr LazyData: \tab yes\cr
   }
 }

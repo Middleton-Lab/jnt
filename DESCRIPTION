@@ -10,8 +10,8 @@ LazyLoad: yes
 Author: Kevin Middleton
 Description: Functions implementing the Johnson-Neyman
     technique.
-Version: 0.2-2
-Date: 2012-11-01
+Version: 0.2-3
+Date: 2012-11-08
 Depends:
     R (>= 2.15)
 Encoding: UTF-8
