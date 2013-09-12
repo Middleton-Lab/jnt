@@ -1,8 +1,8 @@
 ##' Johnson-Neyman Technique
 ##' 
-##' This function performs the Johnson-Neyman Technique on data contained in two
-##' \code{data.frame}s. Currently only the method for \code{data.frame}s is
-##' implemented.
+##' This function performs the Johnson-Neyman Technique on data
+##' contained in two \code{data.frame}s. Currently only the method for
+##' \code{data.frame}s is implemented.
 ##' 
 ##' @title Johnson-Neyman Technique
 ##' 
@@ -22,32 +22,36 @@
 ##' \item{int1}{intercept for data set 1}
 ##' \item{slope2}{Slope for data set 2}
 ##' \item{int2}{intercept for data set 2}
-##' \item{lower}{Lower edge of range of no significant different in slopes}
-##' \item{upper}{Upper edge of range of no significant different in slopes}
+##' \item{lower}{Lower edge of range of no significant different in
+##' slopes}
+##' \item{upper}{Upper edge of range of no significant different in
+##' slopes}
 ##' 
 ##' @author Kevin Middleton (\email{middletonk@@missouri.edu})
 ##' 
-##' @references Johnson PO and Neyman J (1936) Tests of certain linear hypotheses
-##' and their application to some educational problems. \emph{Statistical
-##' Research Memoirs} 1: 57-93.
+##' @references Johnson PO and Neyman J (1936) Tests of certain linear
+##'   hypotheses and their application to some educational problems.
+##'   \emph{Statistical Research Memoirs} 1: 57-93.
 ##' 
-##' Hunka S and Leighton J (1997) Defining Johnson-Neyman regions of significance
-##' in three-covariate ANCOVA using Mathematica. \emph{Journal of Educational
-##' and Behavioral Statistics} 22: 361-387.
+##' Hunka S and Leighton J (1997) Defining Johnson-Neyman regions of
+##' significance in three-covariate ANCOVA using Mathematica.
+##' \emph{Journal of Educational and Behavioral Statistics} 22:
+##' 361-387.
 ##' 
-##' White CR (2003) Allometric analysis beyond heterogenous regression slopes:
-##' Use of the Johnson-Neyman Technique in comparative biology. \emph{Physiol
-##' Biochem Zool} 76: 135-140.
+##' White CR (2003) Allometric analysis beyond heterogenous regression
+##' slopes: Use of the Johnson-Neyman Technique in comparative
+##' biology. \emph{Physiol Biochem Zool} 76: 135-140.
 ##' 
 ##' \emph{Examples:}
 ##' 
-##' White CR (2003) The influence of foraging mode and arid adaptation on the
-##' basal metabolic rates of burrowing mammals. \emph{Physiol Biochem Zool}
-##' 76: 122-134.
+##' White CR (2003) The influence of foraging mode and arid adaptation
+##' on the basal metabolic rates of burrowing mammals. \emph{Physiol
+##' Biochem Zool} 76: 122-134.
 ##' 
-##' Lavin SR, Karasov WH, Ives AR, Middleton KM, Garland T (2008) Morphometrics
-##' of the avian small intestine compared with that of nonflying mammals: A
-##' phylogenetic approach. \emph{Physiol Biochem Zool} 81: 526-550.
+##' Lavin SR, Karasov WH, Ives AR, Middleton KM, Garland T (2008)
+##' Morphometrics of the avian small intestine compared with that of
+##' nonflying mammals: A phylogenetic approach. \emph{Physiol Biochem
+##' Zool} 81: 526-550.
 ##' 
 ##' @keywords univar
 ##' 
@@ -108,9 +112,11 @@ jnt <- function(dat1,
   dat1.sum.y <- sum(dat1.y)
   dat1.sum.x2 <- sum(dat1.x^2) - (dat1.sum.x^2 / dat1.n)
   dat1.sum.y2 <- sum(dat1.y^2) - (dat1.sum.y^2 / dat1.n)
-  dat1.sum.xy <- sum(dat1.x * dat1.y) - sum(dat1.x) * sum(dat1.y) / dat1.n
+  dat1.sum.xy <- sum(dat1.x * dat1.y) - 
+    sum(dat1.x) * sum(dat1.y) / dat1.n
   dat1.X <- matrix(c(rep(1, times = dat1.n), dat1.x), ncol = 2)
-  dat1.fit <- (solve(t(dat1.X) %*% dat1.X)) %*% (t(dat1.X) %*% dat1[,2])
+  dat1.fit <- (solve(t(dat1.X) %*% dat1.X)) %*% 
+    (t(dat1.X) %*% dat1[,2])
   dat1.int <- dat1.fit[1]
   dat1.slope <- dat1.fit[2]
 
@@ -123,9 +129,11 @@ jnt <- function(dat1,
   dat2.sum.y <- sum(dat2.y)
   dat2.sum.x2 <- sum(dat2.x^2) - (dat2.sum.x^2 / dat2.n)
   dat2.sum.y2 <- sum(dat2.y^2) - (dat2.sum.y^2 / dat2.n)
-  dat2.sum.xy <- sum(dat2.x * dat2.y) - sum(dat2.x) * sum(dat2.y) / dat2.n
+  dat2.sum.xy <- sum(dat2.x * dat2.y) - 
+    sum(dat2.x) * sum(dat2.y) / dat2.n
   dat2.X <- matrix(c(rep(1, times = dat2.n), dat2.x), ncol = 2)
-  dat2.fit <- (solve(t(dat2.X) %*% dat2.X)) %*% (t(dat2.X) %*% dat2[,2])
+  dat2.fit <- (solve(t(dat2.X) %*% dat2.X)) %*% 
+    (t(dat2.X) %*% dat2[,2])
   dat2.int <- dat2.fit[1]
   dat2.slope <- dat2.fit[2]
 
@@ -137,27 +145,33 @@ jnt <- function(dat1,
   SSresw <- (dat1.sum.y2 + dat2.sum.y2) - 
     ((dat1.sum.xy + dat2.sum.xy)^2 / (dat1.sum.x2 + dat2.sum.x2))
 
-  total.ss <- sum(c(sum(dat1.y^2), sum(dat2.y^2))) - sum(c(dat1.y, dat2.y))^2 / total.n
+  total.ss <- sum(c(sum(dat1.y^2), sum(dat2.y^2))) - 
+    sum(c(dat1.y, dat2.y))^2 / total.n
 
   sum.xys <- sum(c(dat1.x * dat1.y, dat2.x * dat2.y))
   sum.xs <- sum(c(dat1.x, dat2.x))
   sum.ys <- sum(c(dat1.y, dat2.y))
   sum.x2s <- sum(c(dat1.x^2, dat2.x^2))
 
-  SSrest <- total.ss - (((sum.xys - sum.xs * sum.ys / total.n)^2) / (sum.x2s - (sum.xs^2 / total.n)))
+  SSrest <- total.ss - (((sum.xys - sum.xs * sum.ys / total.n)^2) / 
+                          (sum.x2s - (sum.xs^2 / total.n)))
 
-  SSregw <- (dat1.sum.xy + dat2.sum.xy)^2 / (dat1.sum.x2 + dat2.sum.x2)
+  SSregw <- (dat1.sum.xy + dat2.sum.xy)^2 / 
+    (dat1.sum.x2 + dat2.sum.x2)
 
   bw <- (dat1.sum.xy + dat2.sum.xy) / (dat1.sum.x2 + dat2.sum.x2)
 
-  A.val <- (-f.crit / indiv.res.df) * SSresi * ((1/dat1.sum.x2) + (1/dat2.sum.x2)) + 
+  A.val <- (-f.crit / indiv.res.df) * SSresi * ((1/dat1.sum.x2) + 
+                                                  (1/dat2.sum.x2)) + 
     (dat1.slope - dat2.slope)^2
 
-  B.val <- (f.crit / indiv.res.df) * SSresi * ((dat1.xbar/dat1.sum.x2) + (dat2.xbar/dat2.sum.x2)) +
+  B.val <- (f.crit / indiv.res.df) * SSresi * 
+    ((dat1.xbar/dat1.sum.x2) + (dat2.xbar/dat2.sum.x2)) +
     (dat1.int - dat2.int) * (dat1.slope - dat2.slope)
 
-  C.val <- (-f.crit/indiv.res.df) * SSresi * (total.n / (dat1.n * dat2.n) + dat1.xbar^2/dat1.sum.x2 +
-                                              dat2.xbar^2 / dat2.sum.x2) + (dat1.int - dat2.int)^2
+  C.val <- (-f.crit/indiv.res.df) * SSresi * 
+    (total.n / (dat1.n * dat2.n) + dat1.xbar^2/dat1.sum.x2 +
+    dat2.xbar^2 / dat2.sum.x2) + (dat1.int - dat2.int)^2
 
   lower <- (-B.val - sqrt(B.val^2 - A.val*C.val))/A.val
   upper <- (-B.val + sqrt(B.val^2 - A.val*C.val))/A.val
@@ -172,9 +186,8 @@ jnt <- function(dat1,
                  "lower" = lower,
                  "upper" = upper)
   class(jntobj) <- "jnt"
-  jntobj                                # Return jntobj
+  return(jntobj)
 }
-
 
 print.jnt <- function(x, digits = 4, ...){
   cat("\n")
@@ -192,7 +205,8 @@ print.jnt <- function(x, digits = 4, ...){
   cat("\n")
   cat("Region of non-significant slope difference\n")
   cat("\tLower\t\tUpper\n")
-  cat("\t", format(x$lower, digits = digits), "\t", format(x$upper, digits = digits), "\n\n")
+  cat("\t", format(x$lower, digits = digits), "\t", 
+      format(x$upper, digits = digits), "\n\n")
 }
 
 ## Check for no slope difference
