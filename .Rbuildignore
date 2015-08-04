@@ -1,5 +1,5 @@
 ^\.Rproj\.user$
-^jnt\.Rproj$
+^abd\.Rproj$
 ^bin$
 ^builds$
 ^sandbox$
@@ -9,3 +9,4 @@
 ^\.gitignore$
 ^\.git$
 ^README\.md$
+^.DS\_Store$
