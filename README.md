@@ -1,5 +1,7 @@
 # jnt #
 
+[![Build Status](https://travis-ci.org/kmiddleton/jnt.png?branch=master)](https://travis-ci.org/kmiddleton/jnt)
+
 An R package to carry out the Johnson-Neyman Technique for ANCOVA
 data. Find areas of non-significant slope differences.
 
