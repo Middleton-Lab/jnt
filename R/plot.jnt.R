@@ -23,6 +23,8 @@
 ##' 
 ##' @keywords univar
 ##' 
+##' @export
+##' 
 ##' @examples
 ##' 
 ##' example(jnt)

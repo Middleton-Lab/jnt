@@ -5,8 +5,8 @@
 ##' \tabular{ll}{
 ##' Package: \tab jnt\cr
 ##' Type: \tab Package\cr
-##' Version: \tab 0.2-4\cr
-##' Date: \tab 2014-03-13\cr
+##' Version: \tab 0.2-5\cr
+##' Date: \tab 2015-10-09\cr
 ##' License: \tab GPL-2\cr
 ##' LazyLoad: \tab yes\cr
 ##' LazyData: \tab yes\cr
@@ -45,6 +45,9 @@
 ##' Zool} 81: 526-550.
 ##'
 ##' @keywords package
+##' 
+##' @importFrom graphics abline plot points
+##' @importFrom stats coef lm qf sd
 ##'
 ##' @examples
 ##' 
