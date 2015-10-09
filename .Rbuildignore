@@ -1,12 +1,9 @@
 ^\.Rproj\.user$
-^abd\.Rproj$
-^bin$
-^builds$
-^sandbox$
+^jnt\.Rproj$
 ^\..*\.swp$
 ^\..*\.swo$
-^abd.*\.gz$
 ^\.gitignore$
 ^\.git$
 ^README\.md$
 ^.DS\_Store$
+^\.travis.yml$
