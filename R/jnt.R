@@ -80,15 +80,17 @@
 ##' plot(jnt.out)
 ##' 
 ##' @export
-##' @S3method print jnt
-##' @S3method plot jnt
-
-
+##' 
 jnt <- function(dat1, 
                 dat2 = NULL, 
                 which.is.fact = NULL, 
                 alpha = 0.05, 
                 total.comp = 1) {
+  
+  # Convert to data.frames to avoid problems with tbl_df
+  dat1 <- as.data.frame(dat1)
+  dat2 <- as.data.frame(dat2)
+  
   dat1.n <- nrow(dat1)
   dat2.n <- nrow(dat2)
   total.n <- dat1.n + dat2.n              # Total n for both groups
