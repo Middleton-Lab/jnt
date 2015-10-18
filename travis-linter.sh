@@ -3,7 +3,7 @@ set -e
 
 exitstatus=0
 
-for file in *.R
+for file in $(find ./R -name '*.R')
 do
     Rscript -e "lintr::lint(\"$file\")"
     outputbytes=`Rscript -e "lintr::lint(\"$file\")" | grep ^ | wc -c`
