@@ -2,7 +2,6 @@
 % Please edit documentation in R/jnt.R
 \name{jnt}
 \alias{jnt}
-\alias{print.jnt}
 \title{Johnson-Neyman Technique}
 \usage{
 jnt(dat1, dat2 = NULL, which.is.fact = NULL, alpha = 0.05,

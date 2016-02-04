@@ -5,7 +5,7 @@
 \alias{Lavin.1}
 \alias{Lavin.2}
 \title{Data from Lavin et al., 2008}
-\format{A data frame with 64 observations on the following 2 
+\format{A data frame with 64 observations on the following 2
   variables.
   \describe{
   \item{\code{V1}}{a numeric vector}
