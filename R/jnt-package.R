@@ -48,6 +48,8 @@
 ##'
 ##' @importFrom graphics abline plot points
 ##' @importFrom stats coef lm qf sd
+##' @import smatr
+##' @import ggplot2
 ##'
 ##' @examples
 ##'
@@ -83,8 +85,6 @@ NULL
 ##'   \emph{Physiol Biochem Zool} 81: 526-550.
 ##'
 ##' @keywords datasets
-##'
-##' @import smatr
 ##'
 ##' @examples
 ##'

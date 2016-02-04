@@ -67,10 +67,6 @@
 ##' x2 <- rnorm(n)
 ##' y2 <- 1.25 * x2 + rnorm(n, sd = 0.2)
 ##'
-##' plot(c(x1, x2), c(y1, y2), type = "n", xlab = "x", ylab = "y")
-##' points(x1, y1, pch = 16, col = "grey")
-##' points(x2, y2, pch = 1)
-##'
 ##' df1 <- data.frame(x = x1, y = y1)
 ##' df2 <- data.frame(x = x2, y = y2)
 ##'
@@ -166,16 +162,16 @@ print.jnt <- function(x, digits = 4, ...){
   cat("\n")
   cat("Alpha = ", x$alpha, "\n")
   cat("\n")
-  cat("Set 1:\n")
+  cat("Data 1:\n")
   cat("\tSlope\t\t", format(x$slope1, digits = digits), "\n")
   cat("\tIntercept\t", format(x$int1, digits = digits), "\n")
   cat("\n")
-  cat("Set 2:\n")
+  cat("Data 2:\n")
   cat("\tSlope\t\t", format(x$slope2, digits = digits), "\n")
   cat("\tIntercept\t", format(x$int2, digits = digits), "\n")
   cat("\n")
   cat("Region of non-significant slope difference\n")
-  cat("\tLower:\t", format(x$lower, digits = digits), "\n")
+  cat("\tLower:", format(x$lower, digits = digits), "\n")
   cat("\tUpper:", format(x$upper, digits = digits), "\n\n")
 }
 
