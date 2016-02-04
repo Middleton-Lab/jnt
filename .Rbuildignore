@@ -1,10 +1,8 @@
 ^\.Rproj\.user$
 ^\jnt\.Rproj$
-^\..*\.swp$
-^\..*\.swo$
 ^\.gitignore$
 ^\.git$
 ^README\.md$
 ^.DS\_Store$
 ^\.travis.yml$
-^\travis\-linter.sh$
+^travis-linter\.sh$
