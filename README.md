@@ -16,7 +16,7 @@ require(devtools)
 install_github("kmiddleton/jnt")
 ```
 
-Note that if you are using Windows, you will first need to install Rtools. Start at <http://www.murdoch-sutherland.com/Rtools/> and follow the links to CRAN. 
+Note that if you are using Windows, you will first need to install [Rtools](https://cran.rstudio.com/bin/windows/Rtools/).
 
 # References #
 
