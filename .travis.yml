@@ -53,8 +53,8 @@ script:
   - R CMD check "${PKG_FILE_NAME}" --no-build-vignettes --no-manual --as-cran
 
 # report coverage rate to coveralls
-after_success:
-  - Rscript -e 'covr::coveralls(exclusions = "src/RcppExports.cpp")'
+#after_success:
+#  - Rscript -e 'covr::coveralls(exclusions = "src/RcppExports.cpp")'
 
 # send e-mails if stuff changes
 notifications:
