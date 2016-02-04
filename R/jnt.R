@@ -1,19 +1,20 @@
 ##' Johnson-Neyman Technique
-##' 
+##'
 ##' This function performs the Johnson-Neyman Technique on data
 ##' contained in two \code{data.frame}s. Currently only the method for
 ##' \code{data.frame}s is implemented.
-##' 
+##'
 ##' @title Johnson-Neyman Technique
-##' 
+##'
 ##' @aliases jnt print.jnt
-##' 
+##'
 ##' @param dat1 \code{data.frame} containing data set 1
 ##' @param dat2 \code{data.frame} containing data set 2
 ##' @param which.is.fact Currently not implemented
 ##' @param alpha Desired alpha level for comparison
 ##' @param total.comp Total number of comparisons
-##' 
+##' @param use_sma Boolean; use standardized major axis regression
+##'
 ##' @return A list of type \code{jnt} containing:
 ##' \item{dat1}{Data set 1}
 ##' \item{dat2}{Data set 2}
@@ -26,165 +27,130 @@
 ##' slopes}
 ##' \item{upper}{Upper edge of range of no significant different in
 ##' slopes}
-##' 
+##'
 ##' @author Kevin Middleton (\email{middletonk@@missouri.edu})
-##' 
+##'
 ##' @references Johnson PO and Neyman J (1936) Tests of certain linear
 ##'   hypotheses and their application to some educational problems.
 ##'   \emph{Statistical Research Memoirs} 1: 57-93.
-##' 
+##'
 ##' Hunka S and Leighton J (1997) Defining Johnson-Neyman regions of
 ##' significance in three-covariate ANCOVA using Mathematica.
 ##' \emph{Journal of Educational and Behavioral Statistics} 22:
 ##' 361-387.
-##' 
+##'
 ##' White CR (2003) Allometric analysis beyond heterogenous regression
 ##' slopes: Use of the Johnson-Neyman Technique in comparative
 ##' biology. \emph{Physiol Biochem Zool} 76: 135-140.
-##' 
+##'
 ##' \emph{Examples:}
-##' 
+##'
 ##' White CR (2003) The influence of foraging mode and arid adaptation
 ##' on the basal metabolic rates of burrowing mammals. \emph{Physiol
 ##' Biochem Zool} 76: 122-134.
-##' 
+##'
 ##' Lavin SR, Karasov WH, Ives AR, Middleton KM, Garland T (2008)
 ##' Morphometrics of the avian small intestine compared with that of
 ##' nonflying mammals: A phylogenetic approach. \emph{Physiol Biochem
 ##' Zool} 81: 526-550.
-##' 
+##'
 ##' @keywords univar
-##' 
+##'
 ##' @examples
-##' 
+##'
 ##' # Simulate data
 ##' set.seed(1234)
-##' 
+##'
 ##' n <- 50
-##' 
+##'
 ##' x1 <- rnorm(n)
 ##' y1 <- x1 + rnorm(n, sd = 0.2)
-##' 
+##'
 ##' x2 <- rnorm(n)
-##' y2 <- 1.25 * x2 + rnorm(n, sd = 0.2) 
-##' 
+##' y2 <- 1.25 * x2 + rnorm(n, sd = 0.2)
+##'
 ##' plot(c(x1, x2), c(y1, y2), type = "n", xlab = "x", ylab = "y")
 ##' points(x1, y1, pch = 16, col = "grey")
 ##' points(x2, y2, pch = 1)
-##' 
+##'
 ##' df1 <- data.frame(x = x1, y = y1)
 ##' df2 <- data.frame(x = x2, y = y2)
-##' 
+##'
 ##' (jnt.out <- jnt(df1, df2))
-##' 
+##'
 ##' plot(jnt.out)
-##' 
+##'
 ##' @export
-##' 
-jnt <- function(dat1, 
-                dat2 = NULL, 
-                which.is.fact = NULL, 
-                alpha = 0.05, 
-                total.comp = 1) {
+##'
+jnt <- function(dat1,
+                dat2 = NULL,
+                which.is.fact = NULL,
+                alpha = 0.05,
+                total.comp = 1,
+                use_sma = FALSE) {
+  
+  if (use_sma) {
+    require(smatr)
+    message("Fitting with SMA.")
+    fit_method <- "SMA"
+  } else {
+    message("Fitting with OLS")
+    fit_method <- "OLS"
+  }
   
   # Convert to data.frames to avoid problems with tbl_df
   dat1 <- as.data.frame(dat1)
   dat2 <- as.data.frame(dat2)
   
-  dat1.n <- nrow(dat1)
-  dat2.n <- nrow(dat2)
-  total.n <- dat1.n + dat2.n              # Total n for both groups
-  indiv.res.df <- total.n - 4             # Individual residual df
-  within.res.df <- total.n - 2 - 1        # Within residual df
-
   ## Test for significant slope difference
   not.signif <- precheck(dat1, dat2)
-  if(not.signif){
+  if (not.signif) {
     stop("The slopes are not significantly different.
-         You probably should reconsider using 
+         You probably should reconsider using
          the Johnson-Neyman Technique.")
   }
   
-  dat1.x <- dat1[,1]
-  dat1.y <- dat1[,2]
-  dat1.xbar <- mean(dat1.x)
-  dat1.ybar <- mean(dat1.y)
-  dat1.x.sd <- sd(dat1[,1])
-  dat1.sum.x <- sum(dat1.x)
-  dat1.sum.y <- sum(dat1.y)
-  dat1.sum.x2 <- sum(dat1.x^2) - (dat1.sum.x^2 / dat1.n)
-  dat1.sum.y2 <- sum(dat1.y^2) - (dat1.sum.y^2 / dat1.n)
-  dat1.sum.xy <- sum(dat1.x * dat1.y) - 
-    sum(dat1.x) * sum(dat1.y) / dat1.n
-  dat1.X <- matrix(c(rep(1, times = dat1.n), dat1.x), ncol = 2)
-  dat1.fit <- (solve(t(dat1.X) %*% dat1.X)) %*% 
-    (t(dat1.X) %*% dat1[,2])
-  dat1.int <- dat1.fit[1]
-  dat1.slope <- dat1.fit[2]
-
-  dat2.x <- dat2[,1]
-  dat2.y <- dat2[,2]
-  dat2.xbar <- mean(dat2.x)
-  dat2.ybar <- mean(dat2.y)
-  dat2.x.sd <- sd(dat2[,1])
-  dat2.sum.x <- sum(dat2.x)
-  dat2.sum.y <- sum(dat2.y)
-  dat2.sum.x2 <- sum(dat2.x^2) - (dat2.sum.x^2 / dat2.n)
-  dat2.sum.y2 <- sum(dat2.y^2) - (dat2.sum.y^2 / dat2.n)
-  dat2.sum.xy <- sum(dat2.x * dat2.y) - 
-    sum(dat2.x) * sum(dat2.y) / dat2.n
-  dat2.X <- matrix(c(rep(1, times = dat2.n), dat2.x), ncol = 2)
-  dat2.fit <- (solve(t(dat2.X) %*% dat2.X)) %*% 
-    (t(dat2.X) %*% dat2[,2])
-  dat2.int <- dat2.fit[1]
-  dat2.slope <- dat2.fit[2]
-
-  f.crit <- qf((1-alpha / total.comp / 2), 1, indiv.res.df)
-
-  SSresi <- ((dat1.sum.y2 - ((dat1.sum.xy^2 / dat1.sum.x2)))) + 
-    ((dat2.sum.y2 - ((dat2.sum.xy^2 / dat2.sum.x2))))
-
-  SSresw <- (dat1.sum.y2 + dat2.sum.y2) - 
-    ((dat1.sum.xy + dat2.sum.xy)^2 / (dat1.sum.x2 + dat2.sum.x2))
-
-  total.ss <- sum(c(sum(dat1.y^2), sum(dat2.y^2))) - 
-    sum(c(dat1.y, dat2.y))^2 / total.n
-
-  sum.xys <- sum(c(dat1.x * dat1.y, dat2.x * dat2.y))
-  sum.xs <- sum(c(dat1.x, dat2.x))
-  sum.ys <- sum(c(dat1.y, dat2.y))
-  sum.x2s <- sum(c(dat1.x^2, dat2.x^2))
-
-  SSrest <- total.ss - (((sum.xys - sum.xs * sum.ys / total.n)^2) / 
-                          (sum.x2s - (sum.xs^2 / total.n)))
-
-  SSregw <- (dat1.sum.xy + dat2.sum.xy)^2 / 
-    (dat1.sum.x2 + dat2.sum.x2)
-
-  bw <- (dat1.sum.xy + dat2.sum.xy) / (dat1.sum.x2 + dat2.sum.x2)
-
-  A.val <- (-f.crit / indiv.res.df) * SSresi * ((1/dat1.sum.x2) + 
-                                                  (1/dat2.sum.x2)) + 
-    (dat1.slope - dat2.slope)^2
-
-  B.val <- (f.crit / indiv.res.df) * SSresi * 
-    ((dat1.xbar/dat1.sum.x2) + (dat2.xbar/dat2.sum.x2)) +
-    (dat1.int - dat2.int) * (dat1.slope - dat2.slope)
-
-  C.val <- (-f.crit/indiv.res.df) * SSresi * 
-    (total.n / (dat1.n * dat2.n) + dat1.xbar^2/dat1.sum.x2 +
-    dat2.xbar^2 / dat2.sum.x2) + (dat1.int - dat2.int)^2
-
-  lower <- (-B.val - sqrt(B.val^2 - A.val*C.val))/A.val
-  upper <- (-B.val + sqrt(B.val^2 - A.val*C.val))/A.val
-
+  if (use_sma) {
+    fm1 <- sma(y ~ x, data = dat1, method = fit_method)
+    fm2 <- sma(y ~ x, data = dat2, method = fit_method)
+  } else {
+    fm1 <- lm(dat1$y ~ dat1$x)
+    fm2 <- lm(dat2$y ~ dat2$x)
+  }
+  
+  a1 <- as.numeric(coef(fm1))[1]
+  b1 <- as.numeric(coef(fm1))[2]
+  
+  a2 <- as.numeric(coef(fm2))[1]
+  b2 <- as.numeric(coef(fm2))[2]
+  
+  n1 <- nrow(dat1)
+  n2 <- nrow(dat2)
+  N <- n1 + n2
+  f_crit <- qf((1 - alpha / 2), 1, N - 4)
+  
+  ss_resid <- sum(residuals(fm1) ^ 2) + sum(residuals(fm2) ^ 2)
+  ss_x1 <- sum((dat1$x - mean(dat1$x)) ^ 2)
+  ss_x2 <- sum((dat2$x - mean(dat2$x)) ^ 2)
+  
+  A <- (-f_crit / (N - 4)) * ss_resid * (1/ss_x1 + 1/ss_x2) + (b1 - b2) ^ 2
+  B <- (f_crit / (N - 4)) * ss_resid * (mean(dat1$x)/ss_x1 + mean(dat2$x/ss_x2)) +
+    (a1 - a2) * (b1 - b2)
+  C <- (-f_crit / (N - 4)) * ss_resid *
+    (N / (n1 * n2) +
+       mean(dat1$x) ^ 2 / ss_x1 +
+       mean(dat2$x) ^ 2 / ss_x2) + (a1 - a2) ^ 2
+  
+  lower <- (-B - sqrt(B ^ 2 - A * C)) / A
+  upper <- (-B + sqrt(B ^ 2 - A * C)) / A
+  
   jntobj <- list("dat1" = data.frame(x = dat1.x, y = dat1.y),
-                 "dat2" = data.frame(x = dat2.x, y = dat2.y), 
+                 "dat2" = data.frame(x = dat2.x, y = dat2.y),
                  "alpha" = alpha,
-                 "slope1" = dat1.slope,
-                 "int1" = dat1.int,
-                 "slope2" = dat2.slope,
-                 "int2" = dat2.int,
+                 "slope1" = b1,
+                 "int1" = a1,
+                 "slope2" = b2,
+                 "int2" = a2,
                  "lower" = lower,
                  "upper" = upper)
   class(jntobj) <- "jnt"
@@ -207,7 +173,7 @@ print.jnt <- function(x, digits = 4, ...){
   cat("\n")
   cat("Region of non-significant slope difference\n")
   cat("\tLower\t\tUpper\n")
-  cat("\t", format(x$lower, digits = digits), "\t", 
+  cat("\t", format(x$lower, digits = digits), "\t",
       format(x$upper, digits = digits), "\n\n")
 }
 
@@ -221,7 +187,7 @@ precheck <- function(dat1, dat2){
                                    rep(2, times = dat2.n))))
   fm <- lm(y ~ x * A, data = dd)
   fm.summary <- coef(summary(fm))
-  if(fm.summary[4, 4] < 0.05){
+  if (fm.summary[4, 4] < 0.05) {
     not.signif <- FALSE
   } else {
     not.signif <- TRUE
