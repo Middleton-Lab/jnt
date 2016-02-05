@@ -108,13 +108,8 @@ jnt <- function(dat1,
          the Johnson-Neyman Technique.")
   }
 
-  if (use_sma) {
-    fm1 <- sma(y ~ x, data = dat1, method = fit_method)
-    fm2 <- sma(y ~ x, data = dat2, method = fit_method)
-  } else {
-    fm1 <- lm(dat1$y ~ dat1$x)
-    fm2 <- lm(dat2$y ~ dat2$x)
-  }
+  fm1 <- sma(y ~ x, data = dat1, method = fit_method)
+  fm2 <- sma(y ~ x, data = dat2, method = fit_method)
 
   a1 <- as.numeric(coef(fm1))[1]
   b1 <- as.numeric(coef(fm1))[2]
