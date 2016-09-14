@@ -5,7 +5,7 @@
 \title{Johnson-Neyman Technique}
 \usage{
 jnt(dat1, dat2 = NULL, which.is.fact = NULL, alpha = 0.05,
-  total.comp = 1, use_sma = FALSE)
+  total.comp = 1, use_sma = FALSE, silent = FALSE)
 }
 \arguments{
 \item{dat1}{\code{data.frame} containing data set 1}
@@ -19,6 +19,8 @@ jnt(dat1, dat2 = NULL, which.is.fact = NULL, alpha = 0.05,
 \item{total.comp}{Total number of comparisons}
 
 \item{use_sma}{Boolean; use standardized major axis regression}
+
+\item{silent}{Suppress messages}
 }
 \value{
 A list of type \code{jnt} containing:

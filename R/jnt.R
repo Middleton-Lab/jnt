@@ -12,6 +12,7 @@
 ##' @param alpha Desired alpha level for comparison
 ##' @param total.comp Total number of comparisons
 ##' @param use_sma Boolean; use standardized major axis regression
+##' @param silent Suppress messages
 ##'
 ##' @return A list of type \code{jnt} containing:
 ##' \item{dat1}{Data set 1}
@@ -81,14 +82,17 @@ jnt <- function(dat1,
                 which.is.fact = NULL,
                 alpha = 0.05,
                 total.comp = 1,
-                use_sma = FALSE) {
+                use_sma = FALSE,
+                silent = FALSE) {
 
-  if (use_sma) {
-    message("Fitting with SMA.")
-    fit_method <- "SMA"
-  } else {
-    message("Fitting with OLS")
-    fit_method <- "OLS"
+  if (!silent) {
+    if (use_sma) {
+      message("Fitting with SMA.")
+      fit_method <- "SMA"
+    } else {
+      message("Fitting with OLS")
+      fit_method <- "OLS"
+    }
   }
 
   # Convert to data.frames to avoid problems with tbl_df
@@ -96,7 +100,9 @@ jnt <- function(dat1,
   dat2 <- as.data.frame(dat2)
 
   # Rename column variables to x and y
-  message("Assuming x variable is column 1, and y is column 2.")
+  if (!silent) {
+    message("Assuming x variable is column 1, and y is column 2.")
+  }
   names(dat1) <- c("x", "y")
   names(dat2) <- c("x", "y")
 

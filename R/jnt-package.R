@@ -47,7 +47,7 @@
 ##' @keywords package
 ##'
 ##' @importFrom graphics abline plot points
-##' @importFrom stats coef lm qf sd
+##' @importFrom stats coef lm qf sd residuals
 ##' @import smatr
 ##' @import ggplot2
 ##'
