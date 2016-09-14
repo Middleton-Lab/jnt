@@ -5,8 +5,8 @@
 ##' \tabular{ll}{
 ##' Package: \tab jnt\cr
 ##' Type: \tab Package\cr
-##' Version: \tab 0.3\cr
-##' Date: \tab 2016-02-04\cr
+##' Version: \tab 0.4\cr
+##' Date: \tab 2016-09-14\cr
 ##' License: \tab GPL-2\cr
 ##' LazyLoad: \tab yes\cr
 ##' LazyData: \tab yes\cr

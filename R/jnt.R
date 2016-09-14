@@ -82,7 +82,7 @@ jnt <- function(dat1,
                 alpha = 0.05,
                 total.comp = 1,
                 use_sma = FALSE) {
-  
+
   if (use_sma) {
     message("Fitting with SMA.")
     fit_method <- "SMA"
@@ -90,16 +90,16 @@ jnt <- function(dat1,
     message("Fitting with OLS")
     fit_method <- "OLS"
   }
-  
+
   # Convert to data.frames to avoid problems with tbl_df
   dat1 <- as.data.frame(dat1)
   dat2 <- as.data.frame(dat2)
-  
+
   # Rename column variables to x and y
   message("Assuming x variable is column 1, and y is column 2.")
   names(dat1) <- c("x", "y")
   names(dat2) <- c("x", "y")
-  
+
   ## Test for significant slope difference
   not.signif <- precheck(dat1, dat2)
   if (not.signif) {
@@ -107,29 +107,25 @@ jnt <- function(dat1,
          You probably should reconsider using
          the Johnson-Neyman Technique.")
   }
-    fm1 <- sma(y ~ x, data = dat1, method = fit_method)
-  } else {
-  if (use_sma) {
-    fm2 <- sma(y ~ x, data = dat2, method = fit_method)
-    fm1 <- lm(dat1$y ~ dat1$x)
-    fm2 <- lm(dat2$y ~ dat2$x)
-  }
-  
+  fm2 <- sma(y ~ x, data = dat2, method = fit_method)
+  fm1 <- lm(dat1$y ~ dat1$x)
+  fm2 <- lm(dat2$y ~ dat2$x)
+
   a1 <- as.numeric(coef(fm1))[1]
   b1 <- as.numeric(coef(fm1))[2]
-  
+
   a2 <- as.numeric(coef(fm2))[1]
   b2 <- as.numeric(coef(fm2))[2]
-  
+
   n1 <- nrow(dat1)
   n2 <- nrow(dat2)
   N <- n1 + n2
   f_crit <- qf((1 - alpha / 2), 1, N - 4)
-  
+
   ss_resid <- sum(residuals(fm1) ^ 2) + sum(residuals(fm2) ^ 2)
   ss_x1 <- sum((dat1$x - mean(dat1$x)) ^ 2)
   ss_x2 <- sum((dat2$x - mean(dat2$x)) ^ 2)
-  
+
   A <- ((-f_crit / (N - 4)) * ss_resid * (1/ss_x1 + 1/ss_x2)) + (b1 - b2) ^ 2
   B <- ((f_crit / (N - 4)) * ss_resid * (mean(dat1$x)/ss_x1 + mean(dat2$x/ss_x2))) +
     ((a1 - a2) * (b1 - b2))
@@ -137,10 +133,20 @@ jnt <- function(dat1,
     (((N / (n1 * n2)) +
         (mean(dat1$x) ^ 2 / ss_x1) +
         (mean(dat2$x) ^ 2 / ss_x2))) + ((a1 - a2) ^ 2)
-  
+
+  # Check that the comparison makes sense
+  if (is.nan(tryCatch(sqrt(B^2 - A * C)))) {
+    stop("No Difference Can Be Detected at this Level of Significance")
+  }
+
+  if ((-1 * B + sqrt(B ^ 2 - C * A) ) / A <
+      ((-1 * B - sqrt(B ^ 2 - A * C)) / A)) {
+    stop("No Difference Can Be Detected at this Level of Significance")
+  }
+
   lower <- (-B - sqrt((B ^ 2) - (A * C))) / A
   upper <- (-B + sqrt((B ^ 2) - (A * C))) / A
-  
+
   jntobj <- list("dat1" = data.frame(x = dat1$x, y = dat1$y),
                  "dat2" = data.frame(x = dat2$x, y = dat2$y),
                  "alpha" = alpha,

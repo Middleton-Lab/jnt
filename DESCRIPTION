@@ -10,10 +10,10 @@ LazyLoad: yes
 Author: Kevin Middleton
 Description: Functions implementing the Johnson-Neyman
     technique.
-Version: 0.2-5
-Date: 2015-10-09
+Version: 0.4
+Date: 2016-09-14
 Depends:
-    R (>= 3.0),
+    R (>= 3.3),
     smatr,
     ggplot2
 Encoding: UTF-8
