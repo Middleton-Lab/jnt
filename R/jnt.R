@@ -85,15 +85,14 @@ jnt <- function(dat1,
                 use_sma = FALSE,
                 silent = FALSE) {
 
-  if (!silent) {
-    if (use_sma) {
-      message("Fitting with SMA.")
-      fit_method <- "SMA"
-    } else {
-      message("Fitting with OLS")
-      fit_method <- "OLS"
-    }
+  if (use_sma) {
+    if (!silent) message("Fitting with SMA.")
+    fit_method <- "SMA"
+  } else {
+    if (!silent) message("Fitting with OLS")
+    fit_method <- "OLS"
   }
+
 
   # Convert to data.frames to avoid problems with tbl_df
   dat1 <- as.data.frame(dat1)
