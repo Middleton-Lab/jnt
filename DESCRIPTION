@@ -1,6 +1,4 @@
 Package: jnt
-Imports:
-    graphics
 Maintainer: Kevin Middleton <middletonk@missouri.edu>
 License: GPL-2
 Title: Johnson-Neyman Technique
@@ -16,5 +14,9 @@ Depends:
     R (>= 3.3),
     smatr,
     ggplot2
+Imports:
+    graphics
 Encoding: UTF-8
 RoxygenNote: 5.0.1
+URL: https://github.com/Middleton-Lab/jnt
+BugReports: https://github.com/Middleton-Lab/jnt/issues
