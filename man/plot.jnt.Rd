@@ -4,8 +4,7 @@
 \alias{plot.jnt}
 \title{Plot jnt Object}
 \usage{
-\method{plot}{jnt}(x, reg_lty = 1, jnt_lty = 2, col_signif = "red",
-  plot_range = TRUE, ...)
+\method{plot}{jnt}(x, reg_lty = 1, jnt_lty = 2, col_signif = "red", plot_range = TRUE, ...)
 }
 \arguments{
 \item{x}{Object of class \code{jnt}}
@@ -39,4 +38,3 @@ example(jnt)
 Kevin Middleton \email{middletonk@missouri.edu}
 }
 \keyword{univar}
-

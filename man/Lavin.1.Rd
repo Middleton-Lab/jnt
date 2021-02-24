@@ -5,12 +5,14 @@
 \alias{Lavin.1}
 \alias{Lavin.2}
 \title{Data from Lavin et al., 2008}
-\format{A data frame with 64 observations on the following 2
+\format{
+A data frame with 64 observations on the following 2
   variables.
   \describe{
   \item{\code{V1}}{a numeric vector}
   \item{\code{V2}}{a numeric vector}
-}}
+}
+}
 \description{
 Data set 1 from Lavin et al., 2008
 }
@@ -30,4 +32,3 @@ Lavin SR, Karasov WH, Ives AR, Middleton KM, Garland
   \emph{Physiol Biochem Zool} 81: 526-550.
 }
 \keyword{datasets}
-

@@ -5,12 +5,14 @@
 \alias{White.1}
 \alias{White.2}
 \title{Data from White, 2003}
-\format{A data frame with 50 observations on the following 2
+\format{
+A data frame with 50 observations on the following 2
   variables.
   \describe{
   \item{\code{V1}}{a numeric vector}
   \item{\code{V2}}{a numeric vector}
-}}
+}
+}
 \description{
 Data set 1 from from White, 2003
 }
@@ -30,4 +32,3 @@ White CR (2003) Allometric analysis beyond
   76: 135-140.
 }
 \keyword{datasets}
-

@@ -23,11 +23,6 @@ LazyData: \tab yes\cr
 example(jnt)
 
 }
-\author{
-Kevin Middleton (middletonk@missouri.edu)
-
-Maintainer: Kevin Middleton (middletonk@missouri.edu)
-}
 \references{
 Johnson PO, Neyman J (1936) Tests of certain linear
   hypotheses and their application to some educational problems.
@@ -53,5 +48,9 @@ Morphometrics of the avian small intestine compared with that of
 nonflying mammals: A phylogenetic approach. \emph{Physiol Biochem
 Zool} 81: 526-550.
 }
-\keyword{package}
+\author{
+Kevin Middleton (middletonk@missouri.edu)
 
+Maintainer: Kevin Middleton (middletonk@missouri.edu)
+}
+\keyword{package}

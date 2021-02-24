@@ -4,8 +4,15 @@
 \alias{jnt}
 \title{Johnson-Neyman Technique}
 \usage{
-jnt(dat1, dat2 = NULL, which.is.fact = NULL, alpha = 0.05,
-  total.comp = 1, use_sma = FALSE, silent = FALSE)
+jnt(
+  dat1,
+  dat2 = NULL,
+  which.is.fact = NULL,
+  alpha = 0.05,
+  total.comp = 1,
+  use_sma = FALSE,
+  silent = FALSE
+)
 }
 \arguments{
 \item{dat1}{\code{data.frame} containing data set 1}
@@ -65,9 +72,6 @@ df2 <- data.frame(x = x2, y = y2)
 plot(jnt.out)
 
 }
-\author{
-Kevin Middleton (\email{middletonk@missouri.edu})
-}
 \references{
 Johnson PO and Neyman J (1936) Tests of certain linear
   hypotheses and their application to some educational problems.
@@ -93,5 +97,7 @@ Morphometrics of the avian small intestine compared with that of
 nonflying mammals: A phylogenetic approach. \emph{Physiol Biochem
 Zool} 81: 526-550.
 }
+\author{
+Kevin Middleton (\email{middletonk@missouri.edu})
+}
 \keyword{univar}
-
