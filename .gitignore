@@ -1,6 +1,5 @@
 .Rproj.user
 .Rhistory
-.RData
-bin/
-*.tar.gz
-*.Rcheck
+.Rdata
+.httr-oauth
+.DS_Store
