@@ -1,6 +1,8 @@
 # jnt #
 
-[![Build Status](https://travis-ci.org/kmiddleton/jnt.png?branch=master)](https://travis-ci.org/kmiddleton/jnt)
+<!-- badges: start -->
+  [![R-CMD-check](https://github.com/Middleton-Lab/jnt/workflows/R-CMD-check/badge.svg)](https://github.com/Middleton-Lab/jnt/actions)
+<!-- badges: end -->
 
 An R package to carry out the Johnson-Neyman Technique for ANCOVA
 data. Find areas of non-significant slope differences.
@@ -8,15 +10,13 @@ data. Find areas of non-significant slope differences.
 # Installation #
 
 You can install the most recent version directly from github using
-`install_github()` from the
-[devtools package](https://github.com/hadley/devtools).
+`install_github()` from the `remotes` package.
 
 ```R
-require(devtools)
-install_github("kmiddleton/jnt")
+remotes::install_github("kmiddleton/jnt")
 ```
 
-Note that if you are using Windows, you will first need to install [Rtools](https://cran.rstudio.com/bin/windows/Rtools/).
+Note that if you are using Windows, you might first need to install [Rtools](https://cran.rstudio.com/bin/windows/Rtools/).
 
 # References #
 
