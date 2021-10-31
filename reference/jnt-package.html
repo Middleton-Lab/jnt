@@ -159,46 +159,52 @@ Zool</em> 81: 526-550.</p>
 <p>Maintainer: Kevin Middleton (middletonk@missouri.edu)</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/utils/example.html'>example</a></span><span class='op'>(</span><span class='va'>jnt</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; 
-#&gt; jnt&gt; # Simulate data
-#&gt; jnt&gt; set.seed(1234)
-#&gt; 
-#&gt; jnt&gt; n &lt;- 50
-#&gt; 
-#&gt; jnt&gt; x1 &lt;- rnorm(n)
-#&gt; 
-#&gt; jnt&gt; y1 &lt;- x1 + rnorm(n, sd = 0.2)
-#&gt; 
-#&gt; jnt&gt; x2 &lt;- rnorm(n)
-#&gt; 
-#&gt; jnt&gt; y2 &lt;- 1.25 * x2 + rnorm(n, sd = 0.2)
-#&gt; 
-#&gt; jnt&gt; df1 &lt;- data.frame(x = x1, y = y1)
-#&gt; 
-#&gt; jnt&gt; df2 &lt;- data.frame(x = x2, y = y2)
-#&gt; 
-#&gt; jnt&gt; (jnt.out &lt;- jnt(df1, df2))</div><div class='output co'>#&gt; <span class='message'>Fitting with OLS</span></div><div class='output co'>#&gt; <span class='message'>Assuming x variable is column 1, and y is column 2.</span></div><div class='output co'>#&gt; 
-#&gt; Johnson-Neyman Technique
-#&gt; 
-#&gt; Alpha =  0.05 
-#&gt; 
-#&gt; Data 1:
-#&gt; 	Slope		 0.9853 
-#&gt; 	Intercept	 0.02126 
-#&gt; 
-#&gt; Data 2:
-#&gt; 	Slope		 1.182 
-#&gt; 	Intercept	 0.01386 
-#&gt; 
-#&gt; Region of non-significant slope difference
-#&gt; 	Lower: -0.5258 
-#&gt; 	Upper: 0.8701 
-#&gt; 
-#&gt; 
-#&gt; jnt&gt; plot(jnt.out)</div><div class='output co'>#&gt; <span class='message'>`geom_smooth()` using formula 'y ~ x'</span></div><div class='img'><img src='jnt-package-1.png' alt='' width='700' height='433' /></div><div class='input'>
-</div></pre>
+    <pre class="examples"><span class='r-in'></span>
+<span class='r-in'><span class='fu'><a href='https://rdrr.io/r/utils/example.html'>example</a></span><span class='op'>(</span><span class='va'>jnt</span><span class='op'>)</span></span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> jnt&gt; # Simulate data</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> jnt&gt; set.seed(1234)</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> jnt&gt; n &lt;- 50</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> jnt&gt; x1 &lt;- rnorm(n)</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> jnt&gt; y1 &lt;- x1 + rnorm(n, sd = 0.2)</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> jnt&gt; x2 &lt;- rnorm(n)</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> jnt&gt; y2 &lt;- 1.25 * x2 + rnorm(n, sd = 0.2)</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> jnt&gt; df1 &lt;- data.frame(x = x1, y = y1)</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> jnt&gt; df2 &lt;- data.frame(x = x2, y = y2)</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> jnt&gt; (jnt.out &lt;- jnt(df1, df2))</span>
+<span class='r-msg co'><span class='r-pr'>#&gt;</span> Fitting with OLS</span>
+<span class='r-msg co'><span class='r-pr'>#&gt;</span> Assuming x variable is column 1, and y is column 2.</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> Johnson-Neyman Technique</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> Alpha =  0.05 </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> Data 1:</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> 	Slope		 0.9853 </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> 	Intercept	 0.02126 </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> Data 2:</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> 	Slope		 1.182 </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> 	Intercept	 0.01386 </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> Region of non-significant slope difference</span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> 	Lower: -0.5258 </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> 	Upper: 0.8701 </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> </span>
+<span class='r-out co'><span class='r-pr'>#&gt;</span> jnt&gt; plot(jnt.out)</span>
+<span class='r-msg co'><span class='r-pr'>#&gt;</span> `geom_smooth()` using formula 'y ~ x'</span>
+<span class='r-plt img'><img src='jnt-package-1.png' alt='' width='700' height='433' /></span>
+<span class='r-in'></span>
+</pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
